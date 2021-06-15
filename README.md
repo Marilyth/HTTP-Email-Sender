@@ -6,6 +6,7 @@ Needs [less secure apps access](https://myaccount.google.com/lesssecureapps) to 
     ```
     cd /var/www/html
     sudo git clone https://github.com/Marilyth/HTTP-Email-Sender.git
+    cd HTTP-Email-Sender
     ```
 
 2. If using apache, make sure to install the php mod
