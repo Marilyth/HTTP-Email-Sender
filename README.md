@@ -1,6 +1,6 @@
 # HTTP-Email-Sender
 Send emails via an HTTP call through a gmail account, useful for sending backend emails from a frontend website  
-Needs [less secure apps access](https://myaccount.google.com/lesssecureapps) to be active for the sendTo email address!
+Needs [less secure apps access](https://myaccount.google.com/lesssecureapps) to be active for your gmail address!
 
 1. Put this script in a place reachable through HTTP, e.g. in your apache `/var/www/html` directory
     ```
