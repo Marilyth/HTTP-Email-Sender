@@ -24,7 +24,7 @@
 
   $mail->IsHTML(false);
   $mail->AddAddress($recipient);
-  $mail->SetFrom($content["sendFrom"]);
+  $mail->SetFrom($mail->Username);
   $mail->Subject = $content["subject"];
   $mail->Body = $content["body"];
 
