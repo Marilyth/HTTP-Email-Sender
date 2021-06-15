@@ -1,6 +1,5 @@
 # HTTP-Email-Sender
-Send emails via an HTTP call through a gmail account  
-Useful for sending backend emails from a frontend website, by hardcoding the sendFrom and password fields  
+Send emails via an HTTP call through a gmail account, useful for sending backend emails from a frontend website  
 Needs [less secure apps access](https://myaccount.google.com/lesssecureapps) to be active for the sendTo email address!
 
 1. Put this script in a place reachable through HTTP, e.g. in your apache `/var/www/html` directory
@@ -9,6 +8,12 @@ Needs [less secure apps access](https://myaccount.google.com/lesssecureapps) to 
     sudo git clone https://github.com/Marilyth/HTTP-Email-Sender.git
     cd HTTP-Email-Sender
     ```
+    
+2. Replace the `EmailAddress` and `EmailPassword` within the emailSender.php with your gmail credentials
+   ```
+   sudo sed -i 's/EmailAddress/email@gmail.com/' emailSender.php
+   sudo sed -i 's/EmailPassword/1234/' emailSender.php
+   ```
 
 2. If using apache, make sure to install the php mod
     ```
@@ -25,8 +30,6 @@ Needs [less secure apps access](https://myaccount.google.com/lesssecureapps) to 
     curl -X POST http://192.168.0.104/HTTP-Email-Sender/emailSender.php -H "Content-Type: application/json" --data \
     '{"sendTo": "baermay98@gmail.com",
      "subject": "Test",
-     "body": "Some text within the email",
-     "sendFrom": "mays.raspi@gmail.com",
-     "password": "EmailPassword"}'
+     "body": "Some text within the email"}'
     ```
     Make sure to replace the url with your one
