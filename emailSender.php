@@ -14,7 +14,7 @@
   $mail = new PHPMailer();
   $mail->IsSMTP();
 
-  $mail->SMTPDebug  = 0;  
+  $mail->SMTPDebug  = 2;  
   $mail->SMTPAuth   = TRUE;
   $mail->SMTPSecure = "tls";
   $mail->Port       = 587;
@@ -30,7 +30,6 @@
 
   if(!$mail->Send()) {
     echo "Error while sending Email.";
-    var_dump($mail);
     var_dump($content);
   } else {
     echo "Email sent successfully";
